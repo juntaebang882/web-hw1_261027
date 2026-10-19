@@ -43,7 +43,7 @@ nav a {
 /* 히어로 영역 */
 .hero {
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                      url("https://image.tmdb.org/t/p/w1280/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg");
+                      url("https://image.cine21.com/resize/cine21/still/2008/0526/M0020025_b1[H800-].jpg");
     background-size: cover;
     background-position: center;
     min-height: 40vh;
