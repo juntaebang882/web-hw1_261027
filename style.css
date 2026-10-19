@@ -13,6 +13,7 @@ main, .top, .hero, footer {
     margin: 0 auto 24px auto;
 }
 
+/* 헤더 플렉스 레이아웃 */
 .top {
     display: flex;
     justify-content: space-between;
@@ -22,6 +23,7 @@ main, .top, .hero, footer {
 .top h1 {
     margin: 0;
     font-size: 1.5rem;
+    color: #fff;
 }
 
 nav ul {
@@ -38,6 +40,7 @@ nav a {
     text-decoration: none;
 }
 
+/* 히어로 영역 */
 .hero {
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
                       url("https://image.tmdb.org/t/p/w1280/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg");
@@ -62,12 +65,14 @@ nav a {
     margin: 0;
 }
 
+/* 보드 그리드 레이아웃 */
 .board {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
+/* 카드 스타일 및 전환/변형 효과 */
 .card {
     border-radius: 12px;
     overflow: hidden;
@@ -122,26 +127,29 @@ nav a {
     color: #333;
 }
 
+/* 소개 세션 */
 #about {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 24px;
-    border-radius: 12px;
     margin-top: 24px;
 }
 
 #about h2 {
-    margin-top: 0;
+    color: #fff;
+    margin-bottom: 8px;
 }
 
+#about p {
+    color: #ddd;
+    margin: 4px 0;
+}
+
+/* 푸터 */
 footer {
     font-size: 0.8rem;
+    color: #fff;
     opacity: 0.8;
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 16px;
 }
 
-/* 미디어 쿼리 1: 600px 이상일 때 메뉴 가로 정렬 */
+/* 미디어 쿼리 1: 600px 이상 메뉴 가로 정렬 */
 @media (min-width: 600px) {
     nav ul {
         flex-direction: row;
@@ -149,7 +157,7 @@ footer {
     }
 }
 
-/* 미디어 쿼리 2: 1024px 이상일 때 히어로 영역 확대 */
+/* 미디어 쿼리 2: 1024px 이상 히어로 영역 확대 */
 @media (min-width: 1024px) {
     .hero {
         min-height: 60vh;
