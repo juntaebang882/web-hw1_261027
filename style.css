@@ -67,8 +67,9 @@ header nav a:hover {
   color: var(--accent);
 }
 
-/* 히어로 영역: html에서 인라인 스타일로 배경을 지정하여 안 깨지도록 처리함 */
 .hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+              url("https://image.tmdb.org/t/p/w1280/4tjxYg2AbOzzG9G1YuiT2NzYhlH.jpg") center/cover no-repeat;
   height: 30vh;
   min-height: 200px;
   display: flex;
@@ -76,9 +77,6 @@ header nav a:hover {
   justify-content: center;
   text-align: center;
   padding: 20px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .hero-content h2 {
@@ -86,13 +84,11 @@ header nav a:hover {
   font-size: 2.2rem;
   margin-bottom: 8px;
   color: var(--text);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
 }
 
 .hero-content p {
   font-size: 1rem;
-  opacity: 0.95;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+  opacity: 0.9;
 }
 
 section {
@@ -118,7 +114,6 @@ section h2 {
   gap: var(--gap);
 }
 
-/* 카드 디자인 */
 .card {
   background-color: var(--surface);
   border-radius: 12px;
@@ -132,8 +127,7 @@ section h2 {
   box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
 }
 
-/* 포스터 사진 강제 출력 설정 */
-.card img.poster {
+.card .poster {
   width: 100%;
   aspect-ratio: 2/3;
   object-fit: cover;
@@ -149,22 +143,15 @@ section h2 {
   font-family: var(--font-body);
   font-weight: 700;
   margin-bottom: 6px;
-  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card .info .year,
 .card .info .audience {
   font-size: 0.85rem;
   opacity: 0.8;
-  margin-bottom: 4px;
-}
-
-.card .info .overview {
-  font-size: 0.85rem;
-  opacity: 0.85;
-  margin-top: 8px;
-  line-height: 1.4;
-  color: #d1d5db;
 }
 
 .card .rank {
@@ -219,82 +206,7 @@ section h2 {
   color: var(--warn);
 }
 .change.new::before {
-  content: "NEW";
-}
-
-.skeleton {
-  display: none;
-  min-height: 360px;
-  border-radius: 12px;
-  background: linear-gradient(90deg, var(--surface) 25%, var(--bg) 37%, var(--surface) 63%);
-  background-size: 400% 100%;
-  animation: shimmer 1.4s ease-in-out infinite;
-}
-
-body.is-loading .skeleton {
-  display: block;
-}
-
-body.is-loading .card {
-  display: none;
-}
-
-@keyframes shimmer {
-  from {
-    background-position: 100% 50%;
-  }
-  to {
-    background-position: 0 50%;
-  }
-}
-
-body.detail-page {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-                    url("https://image.tmdb.org/t/p/w1280/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  min-height: 100vh;
-}
-
-.back-link {
-  margin-bottom: 20px;
-  font-size: 0.95rem;
-}
-
-.back-link a {
-  color: var(--accent);
-}
-
-.detail {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--gap);
-  background-color: rgba(31, 43, 68, 0.85);
-  padding: 24px;
-  border-radius: 16px;
-  backdrop-filter: blur(8px);
-}
-
-.detail-poster img {
-  width: 100%;
-  border-radius: 12px;
-  display: block;
-}
-
-.detail-info dl {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 12px 16px;
-}
-
-.detail-info dt {
-  font-weight: bold;
-  color: var(--accent);
-}
-
-.detail-info dd {
-  margin-left: 0;
+  content: "NEW ";
 }
 
 footer {
@@ -315,6 +227,7 @@ footer p {
   .header-container {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 
   .board {
