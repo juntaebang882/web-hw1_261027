@@ -67,9 +67,8 @@ header nav a:hover {
   color: var(--accent);
 }
 
+/* 히어로 영역: html에서 인라인 스타일로 배경을 지정하여 안 깨지도록 처리함 */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-              url("https://image.tmdb.org/t/p/w1280/xJHokMbljv3P1R8C4y3R82.jpg") center/cover no-repeat;
   height: 30vh;
   min-height: 200px;
   display: flex;
@@ -77,6 +76,9 @@ header nav a:hover {
   justify-content: center;
   text-align: center;
   padding: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-content h2 {
@@ -84,11 +86,13 @@ header nav a:hover {
   font-size: 2.2rem;
   margin-bottom: 8px;
   color: var(--text);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
 }
 
 .hero-content p {
   font-size: 1rem;
-  opacity: 0.9;
+  opacity: 0.95;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
 }
 
 section {
@@ -114,6 +118,7 @@ section h2 {
   gap: var(--gap);
 }
 
+/* 카드 디자인 */
 .card {
   background-color: var(--surface);
   border-radius: 12px;
@@ -127,7 +132,8 @@ section h2 {
   box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
 }
 
-.card .poster {
+/* 포스터 사진 강제 출력 설정 */
+.card img.poster {
   width: 100%;
   aspect-ratio: 2/3;
   object-fit: cover;
@@ -155,9 +161,10 @@ section h2 {
 
 .card .info .overview {
   font-size: 0.85rem;
-  color: rgba(245, 245, 247, 0.85);
-  margin-top: 6px;
+  opacity: 0.85;
+  margin-top: 8px;
   line-height: 1.4;
+  color: #d1d5db;
 }
 
 .card .rank {
@@ -243,7 +250,7 @@ body.is-loading .card {
 
 body.detail-page {
   background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-                    url("https://image.tmdb.org/t/p/w1280/xJHokMbljv3P1R8C4y3R82.jpg");
+                    url("https://image.tmdb.org/t/p/w1280/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
