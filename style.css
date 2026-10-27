@@ -69,7 +69,7 @@ header nav a:hover {
 
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-              url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQS4rNV-k-oaLjogxTDgarwzu89mW34ejZTF0moriR5A&s=10") center/cover no-repeat;
+              url("https://img.khan.co.kr/news/2008/06/18/200806180013.webp") center/cover no-repeat;
   height: 30vh;
   min-height: 200px;
   display: flex;
