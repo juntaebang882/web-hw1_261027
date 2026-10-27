@@ -69,7 +69,7 @@ header nav a:hover {
 
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-              url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQS4rNV-k-oaLjogxTDgarwzu89mW34ejZTF0moriR5A&s=10") center/cover no-repeat;
+              url("https://image.tmdb.org/t/p/w1280/xJHokMbljv3P1R8C4y3R82.jpg") center/cover no-repeat;
   height: 30vh;
   min-height: 200px;
   display: flex;
@@ -143,15 +143,21 @@ section h2 {
   font-family: var(--font-body);
   font-weight: 700;
   margin-bottom: 6px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  color: var(--text);
 }
 
 .card .info .year,
 .card .info .audience {
   font-size: 0.85rem;
   opacity: 0.8;
+  margin-bottom: 4px;
+}
+
+.card .info .overview {
+  font-size: 0.85rem;
+  color: rgba(245, 245, 247, 0.85);
+  margin-top: 6px;
+  line-height: 1.4;
 }
 
 .card .rank {
@@ -207,17 +213,6 @@ section h2 {
 }
 .change.new::before {
   content: "NEW";
-}
-
-.card.no-poster .poster-fallback {
-  aspect-ratio: 2/3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 5rem;
-  font-family: var(--font-title);
-  background: linear-gradient(135deg, var(--accent), var(--surface));
-  color: var(--text);
 }
 
 .skeleton {
